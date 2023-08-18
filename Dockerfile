@@ -1,5 +1,6 @@
 FROM python:3
 ENV PYTHONUNBUFFERED 1
+LABEL "name" = "myapp"
 RUN useradd -m worker
 RUN chown worker .
 USER worker
