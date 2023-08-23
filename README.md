@@ -5,3 +5,4 @@
 - каталог test (unitest);
 - каталог example_code(тут добавлен дополнительный код не относящийся к проекту, для того чтобы можно было протестировать sonarqube)
 - файл sonar-project.properties(сведения для агента сканера sonarqube)
+admin:abhi629@@
