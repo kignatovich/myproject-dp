@@ -1,10 +1,12 @@
 FROM python:3
 ENV PYTHONUNBUFFERED 1
 LABEL "name" = "myapp"
-RUN useradd -m worker
-RUN chown worker .
-USER worker
-WORKDIR /user/app
+RUN useradd -m user
+RUN chown user .
+RUN mkdir /app
+RUN chown -R user:user /app
+USER user
+WORKDIR /app
 COPY . /user/app
 USER root
 RUN chmod 777 /user/app/db.sqlite3
