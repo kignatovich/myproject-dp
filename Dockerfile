@@ -7,6 +7,7 @@ USER worker
 WORKDIR /user/app
 COPY . /user/app
 USER root
+RUN chmod 775 /user/app/db.sqlite3
 RUN pip install -r requirements.txt
 USER worker
 ENV PATH="/usr/app/env/bin:$PATH"
