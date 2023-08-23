@@ -4,7 +4,6 @@ LABEL "name" = "myapp"
 RUN useradd -m user
 RUN chown user .
 RUN mkdir /app
-USER user
 WORKDIR /app
 COPY . /app
 RUN chmod 777 /app/db.sqlite3
